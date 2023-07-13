@@ -29,7 +29,9 @@
 	("C-c t r" . go-noisegate-test)
 	("M-\\" . gofmt))
   :hook
-  (go-mode . lsp-deferred)
+  (go-mode . (lambda ()
+	       (setq-local tab-width 4)
+	       (lsp-deferred)))
   :config
   (use-package go-tag)
   (use-package go-fill-struct)
