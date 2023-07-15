@@ -42,4 +42,6 @@
 		 (add-hook 'after-change-functions #'go-noisegate-record-change)
 		 (add-hook 'after-save-hook #'go-noisegate-hint)))))
 
+(use-package dockerfile-mode)
+
 (provide 'init-golang)
